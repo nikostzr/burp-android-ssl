@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#Nikos Tziris for personal use
+
 echo "Installing Burp certificate"
 curl http://burp/cert -x localhost:8080 > /tmp/cacert.der
 openssl x509 -inform DER -in /tmp/cacert.der -out /tmp/cacert.pem
